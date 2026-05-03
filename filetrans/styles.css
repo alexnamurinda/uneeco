@@ -161,7 +161,7 @@ body {
     min-height: 100vh;
     background-image:
         linear-gradient(90deg, rgba(11, 26, 86, 0.45) 0%, rgba(11, 26, 86, 0.24) 35%, rgba(11, 26, 86, 0.12) 50%, rgba(255,255,255,0) 100%),
-        url('../assets/images/helo.png');
+        url('helo.png');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;

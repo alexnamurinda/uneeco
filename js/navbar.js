@@ -32,3 +32,46 @@ if (navbarCollapse) {
         });
     });
 }
+
+// Search functionality
+const searchBtn = document.getElementById('searchBtn');
+const navLinks = document.getElementById('navLinks');
+const searchBar = document.getElementById('searchBar');
+const searchInput = document.getElementById('searchInput');
+const searchIcon = searchBtn ? searchBtn.querySelector('i') : null;
+
+if (searchBtn && navLinks && searchBar && searchInput && searchIcon) {
+    searchBtn.addEventListener('click', function() {
+        if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+            navLinks.style.display = 'none';
+            searchBar.style.display = 'block';
+            searchIcon.className = 'fas fa-times';
+            searchInput.focus();
+        } else {
+            navLinks.style.display = 'flex';
+            searchBar.style.display = 'none';
+            searchIcon.className = 'fas fa-search';
+            searchInput.value = '';
+        }
+    });
+
+    // Handle enter key for search
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if (query) {
+                const isInPages = window.location.pathname.includes('/pages/');
+                const searchPath = isInPages ? 'search.html' : 'pages/search.html';
+                window.location.href = `${searchPath}?q=${encodeURIComponent(query)}`;
+            }
+        }
+    });
+}
+
+// Cart functionality (placeholder)
+const cartBtn = document.getElementById('cartBtn');
+if (cartBtn) {
+    cartBtn.addEventListener('click', function() {
+        window.location.reload();
+    });
+}

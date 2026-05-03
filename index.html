@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uneeco Uganda | Premium Paper Supply</title>
+    <title>Uneeco Uganda limited | your premium Paper Supply</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -26,7 +26,7 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="assets/images/uneeco_logo.png" alt="Uneeco Logo" class="img-fluid"></a>
@@ -34,12 +34,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="navLinks">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+                <div class="search-bar" id="searchBar" style="display: none;">
+                    <input type="text" class="form-control" placeholder="Search..." id="searchInput">
+                </div>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-icon" id="searchBtn"><i class="fas fa-search"></i></button>
+                <div class="cart-icon" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
             </div>
         </div>
     </nav>
@@ -53,7 +63,7 @@
                 <div class="col-lg-6 hero-content" data-aos="fade-up" data-aos-duration="900">
                     <div class="hero-eyebrow">Uganda's Paper Supply Partner</div>
                     <h1 class="hero-title">you print , we provide</h1>
-                    <p class="hero-sub">Uneeco Uganda delivers premium paper products to businesses, schools, and institutions across Uganda — reliably, affordably, and on time.</p>
+                    <p class="hero-sub">Uneeco Uganda limited delivers premium paper products to businesses, companies, and institutions across Uganda — reliably, affordably, and on time.</p>
                     <div>
                         <a href="#products" class="btn-hero-primary">
                             <i class="fas fa-box-open" style="font-size:0.85rem;"></i> View Products
@@ -64,8 +74,8 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="hero-stack">
-                        <!--<div class="paper-sheet"></div>
+                    <!-- <div class="hero-stack">
+                        <div class="paper-sheet"></div>
                         <div class="paper-sheet"></div>
                         <div class="paper-sheet">
                             <div class="paper-logo-mark"><img src="assets/images/uneeco_logo.png" alt="Uneeco Logo" class="img-fluid"></div>
@@ -74,8 +84,8 @@
                             <div class="paper-line"></div>
                             <div class="paper-line"></div>
                             <div class="paper-line"></div>
-                        </div>-->
-                    </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -21,12 +21,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="navLinks">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                 </ul>
+                <div class="search-bar" id="searchBar" style="display: none;">
+                    <input type="text" class="form-control" placeholder="Search..." id="searchInput">
+                </div>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-icon" id="searchBtn"><i class="fas fa-search"></i></button>
+                <div class="cart-icon" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
             </div>
         </div>
     </nav>
