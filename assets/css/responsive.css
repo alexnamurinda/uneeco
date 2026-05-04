@@ -154,6 +154,7 @@
         order: 2;
         margin-left: auto;
         margin-right: 0;
+        display: none; /* hide search/cart on small phones to save space */
     }
 
     .navbar-toggler {
