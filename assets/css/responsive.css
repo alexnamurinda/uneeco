@@ -63,11 +63,18 @@
 
     /* Logo scale */
     .navbar-brand img {
-        height: 140px;
+        height: 170px;
     }
 
     .navbar.scrolled .navbar-brand img {
-        height: 90px;
+        height: 150px;
+    }
+
+    .navbar-icons {
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+        display: none; /* hide search/cart on small phones to save space */
     }
 
     /* Hero text */
