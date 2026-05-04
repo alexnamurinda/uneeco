@@ -1008,6 +1008,7 @@ footer p {
 
     .top-banner {
         display: block;
+        width: 100%;
     }
 
     .top-banner-text {
@@ -1025,6 +1026,7 @@ footer p {
     .navbar {
         top: 0;
         height: 5.5rem;
+        width: 100%;
     }
 
     .navbar .container {
