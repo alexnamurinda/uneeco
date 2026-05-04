@@ -213,13 +213,13 @@ body {
 
 /* ── HERO ── */
 .hero {
-    min-height: 82vh;
+    min-height: 84vh;
     max-height: 88vh;
     background-image:
-        radial-gradient(circle at left bottom, rgba(11, 26, 86, 0.9) 0%, rgba(11, 26, 86, 0.35) 30%, rgba(11, 26, 86, 0.05) 54%, rgba(255, 255, 255, 0.00) 75%),
-        linear-gradient(90deg, rgba(11, 26, 86, 0.30) 0%, rgba(11, 26, 86, 0.05) 26%, rgba(11, 26, 86, 0.03) 46%, rgba(255, 255, 255, 0.00) 100%),
-        url('../assets/images/helo.png');
-    background-size: 100% auto;
+        radial-gradient(circle at 20% 60%, rgba(11,26,86,0.92) 0%, rgba(11,26,86,0.55) 30%, rgba(11,26,86,0.08) 58%, transparent 75%),
+        linear-gradient(100deg, rgba(11,26,86,0.35) 0%, rgba(11,26,86,0.05) 40%, transparent 65%),
+        url('../images/helo.png');
+    background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
     position: relative;
@@ -310,21 +310,19 @@ body {
 }
 
 .btn-hero-primary {
-    /* background: #fff; */
-    background: #252a68;
-    color: #fff;
+    background: #fff;
+    color: var(--primary-dark);
     border: none;
-    padding: 14px 32px;
+    padding: 13px 30px;
     border-radius: 100px;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    margin-right: 12px;
-    margin-bottom: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
 }
 
 .btn-hero-primary:hover {
@@ -336,18 +334,18 @@ body {
 
 .btn-hero-outline {
     background: transparent;
-    color: #252a68;
-    border: 1.5px solid #252a68;
-    padding: 14px 32px;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.55);
+    padding: 13px 30px;
     border-radius: 100px;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    margin-bottom: 12px;
+    backdrop-filter: blur(4px);
 }
 
 .btn-hero-outline:hover {
@@ -500,6 +498,16 @@ body {
     margin-bottom: 8px;
 }
 
+/* Bottom fade */
+.hero-bottom-fade {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--warm-white));
+    pointer-events: none;
+    z-index: 1;
+}
+
 /* ── SECTION STYLES ── */
 section {
     padding: 100px 0;
@@ -529,7 +537,7 @@ section {
     font-size: 1rem;
     color: var(--text-muted);
     line-height: 1.75;
-    max-width: 540px;
+    max-width: 100%;
 }
 
 /* ── ABOUT STRIP ── */
