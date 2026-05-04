@@ -37,13 +37,13 @@ body {
     width: 100%;
     background: var(--logo-dark-blue);
     color: #fff;
-    padding: 0.4rem 0;
+    padding: 0.25rem 0;
     z-index: 1040;
     transition: transform 0.4s ease;
 }
 
 .top-banner-text {
-    font-size: 0.80rem;
+    font-size: 0.70rem;
     letter-spacing: 0.02em;
     margin: 0;
 }
@@ -51,8 +51,9 @@ body {
 .top-banner-socials a {
     color: #fff;
     margin-left: 1rem;
-    font-size: 0.80rem;
+    font-size: 0.70rem;
     transition: color 0.25s ease;
+    padding: 0.25rem 0;
 }
 
 .top-banner-socials a:hover {
@@ -1010,7 +1011,7 @@ footer p {
     }
 
     .top-banner-text {
-        font-size: 0.70rem;
+        font-size: 0.55rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1018,7 +1019,7 @@ footer p {
 
     .top-banner-socials a {
         margin-left: 0.5rem;
-        font-size: 0.70rem;
+        font-size: 0.55rem;
     }
 
     .navbar {
