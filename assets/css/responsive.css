@@ -58,12 +58,11 @@
 
     .navbar {
         top: var(--top-banner-height);
-        height: 4.5rem;
     }
 
     /* Logo scale */
     .navbar-brand img {
-        height: 170px;
+        height: 220px;
     }
 
     .navbar-icons {
@@ -120,12 +119,10 @@
 
     .navbar {
         top: var(--top-banner-height);
-        height: 4.5rem;
     }
 
     .navbar .container {
         position: relative;
-        min-height: 4.5rem;
         justify-content: space-between;
     }
 
@@ -136,7 +133,7 @@
     }
 
     .navbar-brand img {
-        height: 80px;
+        height: 150px;
     }
 
     .navbar-icons {
@@ -164,7 +161,7 @@
         justify-content: center;
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         color: var(--primary-dark);
     }
 
@@ -280,12 +277,10 @@
     /* Navbar */
     .navbar {
         top: var(--top-banner-height);
-        height: 4rem;
     }
 
     .navbar .container {
         position: relative;
-        min-height: 4rem;
         justify-content: space-between;
     }
 
@@ -296,9 +291,9 @@
     }
 
     .navbar-brand img {
-        height: 65px;
+        height: 80px;
     }
-    
+
     .navbar-icons {
     display: none;
 }

@@ -116,7 +116,7 @@ body {
 
 .navbar-brand img {
     /* height: calc(var(--navbar-height) - 0.5rem); */
-    height: calc(var(--navbar-height) + 1.5rem);
+    height: calc(var(--navbar-height) + 2.5rem);
     width: auto;
 }
 
@@ -938,6 +938,35 @@ footer p {
 .footer-bottom {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer socials */
+.footer-socials a {
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    transition: color 0.25s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--gold);
+}
+
+/* Footer HQ */
+.footer-hq-city {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.footer-hq-detail {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.4rem;
 }
 
 /* ── BACK TO TOP ── */
