@@ -56,6 +56,15 @@
         padding-top: calc(var(--top-banner-height) + 4.5rem);
     }
 
+    .top-banner-text {
+        font-size: 0.50rem;
+
+    }
+
+    .top-banner-socials a {
+        font-size: 0.50rem;
+    }
+
     .navbar {
         top: var(--top-banner-height);
     }
@@ -115,6 +124,15 @@
 
     body {
         padding-top: calc(var(--top-banner-height) + 4.5rem);
+    }
+
+    .top-banner-text {
+        font-size: 0.50rem;
+
+    }
+
+    .top-banner-socials a {
+        font-size: 0.50rem;
     }
 
     .navbar {
@@ -274,6 +292,16 @@
         padding-top: calc(var(--top-banner-height) + 4rem);
     }
 
+    .top-banner-text {
+        font-size: 0.40rem;
+
+    }
+
+    .top-banner-socials a {
+        font-size: 0.40rem;
+    }
+
+
     /* Navbar */
     .navbar {
         top: var(--top-banner-height);
@@ -295,8 +323,9 @@
     }
 
     .navbar-icons {
-    display: none;
-}
+        display: none;
+    }
+
     .navbar-icons {
         order: 2;
         margin-left: auto;
