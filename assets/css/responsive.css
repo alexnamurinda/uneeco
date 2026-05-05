@@ -52,15 +52,15 @@
    ══════════════════════════════════════════════ */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-    /* Navbar: hide top banner on scroll to save space */
+    body {
+        padding-top: calc(var(--top-banner-height) + 4.5rem);
+    }
+
     .navbar {
         top: var(--top-banner-height);
+        height: 4.5rem;
     }
-
-    .navbar.scrolled {
-        top: 0;
-    }
-
+    
     /* Logo scale */
     .navbar-brand img {
         height: 170px;
@@ -74,7 +74,8 @@
         order: 2;
         margin-left: auto;
         margin-right: 0;
-        display: none; /* hide search/cart on small phones to save space */
+        display: none;
+        /* hide search/cart on small phones to save space */
     }
 
     /* Hero text */
@@ -117,24 +118,13 @@
    ══════════════════════════════════════════════ */
 @media (min-width: 576px) and (max-width: 767.98px) {
 
-    /* Body offset: only navbar height since banner is hidden below nav */
     body {
-        padding-top: 4.5rem;
+        padding-top: calc(var(--top-banner-height) + 4.5rem);
     }
 
-    /* Top banner: single line, smaller text */
-    .top-banner {
-        display: none; /* hide on small phones; re-shown on md+ */
-    }
-
-    /* Navbar sits at very top */
     .navbar {
-        top: 0;
+        top: var(--top-banner-height);
         height: 4.5rem;
-    }
-
-    .navbar.scrolled {
-        top: 0;
     }
 
     .navbar .container {
@@ -161,7 +151,8 @@
         order: 2;
         margin-left: auto;
         margin-right: 0;
-        display: none; /* hide search/cart on small phones to save space */
+        display: none;
+        /* hide search/cart on small phones to save space */
     }
 
     .navbar-toggler {
@@ -185,8 +176,13 @@
         color: var(--primary-dark);
     }
 
-    .navbar-toggler.collapsed .navbar-toggler-icon::before    { content: '\f0c9'; }
-    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before { content: '\f00d'; }
+    .navbar-toggler.collapsed .navbar-toggler-icon::before {
+        content: '\f0c9';
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+        content: '\f00d';
+    }
 
     /* Dropdown */
     .navbar-collapse {
@@ -285,24 +281,14 @@
    ══════════════════════════════════════════════ */
 @media (max-width: 575.98px) {
 
-    /* Body offset: navbar only */
     body {
-        padding-top: 4rem;
-    }
-
-    /* Hide top banner completely on very small screens */
-    .top-banner {
-        display: none;
+        padding-top: calc(var(--top-banner-height) + 4rem);
     }
 
     /* Navbar */
     .navbar {
-        top: 0;
+        top: var(--top-banner-height);
         height: 4rem;
-    }
-
-    .navbar.scrolled {
-        top: 0;
     }
 
     .navbar .container {
@@ -325,6 +311,9 @@
         height: 55px;
     }
 
+    .navbar-icons {
+    display: none;
+}
     .navbar-icons {
         order: 2;
         margin-left: auto;
@@ -366,8 +355,13 @@
         color: var(--primary-dark);
     }
 
-    .navbar-toggler.collapsed .navbar-toggler-icon::before    { content: '\f0c9'; }
-    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before { content: '\f00d'; }
+    .navbar-toggler.collapsed .navbar-toggler-icon::before {
+        content: '\f0c9';
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+        content: '\f00d';
+    }
 
     /* Nav dropdown */
     .navbar-collapse {
@@ -512,23 +506,5 @@
         width: 40px;
         height: 40px;
         font-size: 0.9rem;
-    }
-}
-
-
-/* ══════════════════════════════════════════════
-   Show top banner back on md+
-   ══════════════════════════════════════════════ */
-@media (min-width: 768px) {
-    .top-banner {
-        display: block;
-    }
-
-    body {
-        padding-top: calc(var(--top-banner-height) + var(--navbar-height));
-    }
-
-    .navbar {
-        top: var(--top-banner-height);
     }
 }

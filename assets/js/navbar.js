@@ -7,16 +7,31 @@ const topBannerHeight = topBanner ? topBanner.offsetHeight : 50;
 if (document.readyState !== 'loading') {
     if (heroStack) heroStack.classList.add('animate');
 } else {
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         if (heroStack) heroStack.classList.add('animate');
     });
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     if (window.scrollY > topBannerHeight) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+});
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > topBannerHeight) {
+        navbar.classList.add('scrolled');
+        // Keep navbar below banner on small screens
+        if (window.innerWidth < 768) {
+            navbar.style.top = topBanner ? topBanner.offsetHeight + 'px' : '0';
+        }
+    } else {
+        navbar.classList.remove('scrolled');
+        if (window.innerWidth < 768) {
+            navbar.style.top = topBanner ? topBanner.offsetHeight + 'px' : '0';
+        }
     }
 });
 
@@ -41,7 +56,7 @@ const searchInput = document.getElementById('searchInput');
 const searchIcon = searchBtn ? searchBtn.querySelector('i') : null;
 
 if (searchBtn && navLinks && searchBar && searchInput && searchIcon) {
-    searchBtn.addEventListener('click', function() {
+    searchBtn.addEventListener('click', function () {
         if (searchBar.style.display === 'none' || searchBar.style.display === '') {
             navLinks.style.display = 'none';
             searchBar.style.display = 'block';
@@ -56,7 +71,7 @@ if (searchBtn && navLinks && searchBar && searchInput && searchIcon) {
     });
 
     // Handle enter key for search
-    searchInput.addEventListener('keydown', function(e) {
+    searchInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             const query = searchInput.value.trim();
             if (query) {
@@ -71,7 +86,7 @@ if (searchBtn && navLinks && searchBar && searchInput && searchIcon) {
 // Cart functionality (placeholder)
 const cartBtn = document.getElementById('cartBtn');
 if (cartBtn) {
-    cartBtn.addEventListener('click', function() {
+    cartBtn.addEventListener('click', function () {
         window.location.reload();
     });
 }
