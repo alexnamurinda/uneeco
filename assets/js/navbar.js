@@ -25,12 +25,12 @@ window.addEventListener('scroll', function () {
         navbar.classList.add('scrolled');
         // Keep navbar below banner on small screens
         if (window.innerWidth < 768) {
-            navbar.style.top = topBanner ? topBanner.offsetHeight + 'px' : '0';
+            //navbar.style.top = topBanner ? topBanner.offsetHeight + 'px' : '0';
         }
     } else {
         navbar.classList.remove('scrolled');
         if (window.innerWidth < 768) {
-            navbar.style.top = topBanner ? topBanner.offsetHeight + 'px' : '0';
+           // navbar.style.top = topBanner ? topBanner.offsetHeight + 'px' : '0';
         }
     }
 });

@@ -17,8 +17,8 @@
     --gold: #b08d57;
     --navbar-light: #fdfbf8;
     --logo-dark-blue: #0b1a56;
-    --top-banner-height: 2.5rem;
-    --navbar-height: 4.0rem;
+    --top-banner-height: 2.0rem;
+    --navbar-height: 5.5rem;
     --brand-overflow: 1.5rem;
 }
 
@@ -92,7 +92,6 @@ body {
 }
 
 .navbar.scrolled {
-    top: 0;
     z-index: 1050;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
@@ -110,24 +109,15 @@ body {
 
 .navbar-brand {
     position: relative;
-    width: 220px;
-    top: var(--brand-overflow);
-    transition: top 0.3s ease;
+    width: 300px;
+    top: 0;
     z-index: 1055;
 }
 
-.navbar.scrolled .navbar-brand {
-    top: 0;
-}
-
 .navbar-brand img {
-    height: 180px;
+    /* height: calc(var(--navbar-height) - 0.5rem); */
+    height: calc(var(--navbar-height) + 1.5rem);
     width: auto;
-    transition: height 0.3s ease;
-}
-
-.navbar.scrolled .navbar-brand img {
-    height: 100px;
 }
 
 .navbar-brand span {

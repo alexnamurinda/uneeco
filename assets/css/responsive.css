@@ -60,14 +60,10 @@
         top: var(--top-banner-height);
         height: 4.5rem;
     }
-    
+
     /* Logo scale */
     .navbar-brand img {
         height: 170px;
-    }
-
-    .navbar.scrolled .navbar-brand img {
-        height: 150px;
     }
 
     .navbar-icons {
@@ -141,10 +137,6 @@
 
     .navbar-brand img {
         height: 80px;
-    }
-
-    .navbar.scrolled .navbar-brand img {
-        height: 70px;
     }
 
     .navbar-icons {
@@ -306,11 +298,7 @@
     .navbar-brand img {
         height: 65px;
     }
-
-    .navbar.scrolled .navbar-brand img {
-        height: 55px;
-    }
-
+    
     .navbar-icons {
     display: none;
 }
