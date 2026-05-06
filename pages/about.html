@@ -46,9 +46,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center" id="navLinks">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item d-lg-none">
                         <a class="nav-link" href="#account">
@@ -323,30 +323,11 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic' });
 
-        // Back to top
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('active', window.scrollY > 400);
-        });
-
-        // Navbar scroll shadow
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 60);
-        });
-
-        // Search toggle
-        const searchBtn = document.getElementById('searchBtn');
-        const searchBar = document.getElementById('searchBar');
-        if (searchBtn && searchBar) {
-            searchBtn.addEventListener('click', () => {
-                searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
-            });
-        }
-    </script>
+        <!-- Custom Scripts -->
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/scroll.js"></script>
 </body>
 
 </html>

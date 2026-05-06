@@ -100,7 +100,7 @@
 .hero-slide-title {
     font-family: sans-serif;
     font-size: clamp(2.0rem, 5.0vw, 3rem);
-    font-weight: 450;
+    font-weight: 550;
     color: #fff;
     line-height: 1.04;
     letter-spacing: -1px;

@@ -60,10 +60,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center" id="navLinks">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     <li class="nav-item d-lg-none">
                         <a class="nav-link" href="#account">
                             <i class="fas fa-user me-1"></i> My Account
@@ -284,13 +284,13 @@
     <section class="map-section">
         <div class="container">
             <div class="row mb-4 align-items-end">
-                <div class="col-lg-7" data-aos="fade-right">
+                <div class="col-lg-7" data-aos="fade-up">
                     <span class="contact-section-tag">Find Us</span>
                     <h2 class="contact-section-title">Our Location</h2>
                     <p class="contact-section-lead">Based in Kampala, we supply quality paper products across Uganda.
                     </p>
                 </div>
-                <div class="col-lg-5 text-lg-end" data-aos="fade-left">
+                <div class="col-lg-5 text-lg-end" data-aos="fade-up">
                     <a href="https://www.google.com/maps?q=UNEECO+Uganda+Limited+JP+Plaza+Kampala" target="_blank" rel="noopener"
                         class="btn-primary-green">
                         <i class="fas fa-directions" style="font-size:0.85rem;"></i> Get Directions
@@ -484,114 +484,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-    <script>
-        // ── AOS Init ──
-        AOS.init({ once: true, offset: 60, easing: 'ease-out-quad' });
-
-        // ── Navbar scroll shadow ──
-        const navbar = document.getElementById('mainNavbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 40);
-        });
-
-        // ── Back to top ──
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('active', window.scrollY > 300);
-        });
-        backToTop.addEventListener('click', e => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // ── Search toggle ──
-        const searchBtn = document.getElementById('searchBtn');
-        if (searchBtn) {
-            searchBtn.addEventListener('click', () => {
-                const searchBar = document.getElementById('searchBar');
-                if (searchBar) {
-                    searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
-                }
-            });
-        }
-
-        // ── Hours badge: show/hide based on current time ──
-        (function () {
-            const badge = document.querySelector('.hours-badge');
-            if (!badge) return;
-            const now = new Date();
-            const day = now.getDay();   // 0 Sun, 6 Sat
-            const hour = now.getHours();
-            const min = now.getMinutes();
-            const t = hour + min / 60;
-
-            let isOpen = false;
-            if (day >= 1 && day <= 5 && t >= 8 && t < 18) isOpen = true;  // Mon–Fri 8–18
-            if (day === 6 && t >= 9 && t < 14) isOpen = true;              // Sat 9–14
-
-            if (!isOpen) {
-                badge.textContent = 'Closed';
-                badge.style.background = 'rgba(255,80,80,0.15)';
-                badge.style.color = '#ff7070';
-                badge.style.borderColor = 'rgba(255,80,80,0.25)';
-            }
-        })();
-
-        // ── Contact Form submit ──
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Basic required field validation
-            const name = document.getElementById('cf-name').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const subject = document.getElementById('cf-subject').value;
-            const message = document.getElementById('cf-message').value.trim();
-            const consent = document.getElementById('cf-consent').checked;
-
-            if (!name || !email || !subject || !message || !consent) {
-                // Highlight empty required fields
-                [document.getElementById('cf-name'),
-                document.getElementById('cf-email'),
-                document.getElementById('cf-subject'),
-                document.getElementById('cf-message')].forEach(el => {
-                    if (!el.value.trim()) {
-                        el.style.borderColor = '#e05';
-                        el.addEventListener('input', () => el.style.borderColor = '', { once: true });
-                    }
-                });
-                if (!consent) {
-                    document.getElementById('cf-consent').style.outline = '2px solid #e05';
-                }
-                return;
-            }
-
-            // Simulate submission (replace with real fetch/API call)
-            const btn = form.querySelector('.cf-submit');
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                document.getElementById('formView').style.display = 'none';
-                const success = document.getElementById('formSuccess');
-                success.style.display = 'block';
-                success.style.opacity = 0;
-                requestAnimationFrame(() => {
-                    success.style.transition = 'opacity 0.5s ease';
-                    success.style.opacity = 1;
-                });
-            }, 1400);
-        });
-
-        function resetForm() {
-            document.getElementById('formView').style.display = 'block';
-            document.getElementById('formSuccess').style.display = 'none';
-            document.getElementById('contactForm').reset();
-            const btn = document.querySelector('.cf-submit');
-            btn.innerHTML = 'Send Message <i class="fas fa-arrow-right"></i>';
-            btn.disabled = false;
-        }
-    </script>
+    <!-- Custom Scripts -->
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/scroll.js"></script>
+    <script src="../assets/js/contact.js"></script>
 </body>
 
 </html>

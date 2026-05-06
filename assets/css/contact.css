@@ -116,12 +116,13 @@
 }
 
 .contact-section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 700;
+    font-family: sans-serif;
+    font-size: clamp(2.0rem, 5.0vw, 3rem);
+    font-weight: 550;
     color: var(--primary-dark);
-    line-height: 1.15;
-    margin-bottom: 1rem;
+    line-height: 1.04;
+    letter-spacing: -1px;
+    margin-bottom: 1.2rem;
 }
 
 .contact-section-lead {
