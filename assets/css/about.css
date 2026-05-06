@@ -17,7 +17,7 @@
     background:
         radial-gradient(circle at 15% 60%, rgba(11, 26, 86, 0.96) 0%, rgba(11, 26, 86, 0.7) 35%, rgba(11, 26, 86, 0.1) 65%, transparent 80%),
         linear-gradient(120deg, rgba(11, 26, 86, 0.4) 0%, rgba(11, 26, 86, 0.05) 50%, transparent 100%),
-        url('../images/about.jpg') center center / cover no-repeat;
+        url('../images/about.png') center center / cover no-repeat;
 
     /* Fallback gradient when no bg image */
     background-color: var(--primary-dark);
