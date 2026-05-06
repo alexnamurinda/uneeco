@@ -372,7 +372,7 @@ body {
 
 .paper-sheet {
     position: absolute;
-    width: 220px;
+    width: 280px;
     height: 280px;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 255, 255, 0.95);
@@ -395,10 +395,7 @@ body {
 .paper-sheet:nth-child(3) {
     transform: rotate(2deg);
     background: rgba(255, 255, 255, 0.95);
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    gap: 10px;
+    overflow: hidden;
 }
 
 .hero-stack.animate .paper-sheet:nth-child(1) {
@@ -494,11 +491,68 @@ body {
 }
 
 .paper-logo-mark {
-    width: 36px;
-    height: 36px;
-    background: var(--primary-mid);
-    border-radius: 4px;
-    margin-bottom: 8px;
+    background: transparent;
+    margin-bottom: 6px;
+}
+
+.paper-logo-mark img {
+    max-width: 170px;
+    max-height: 72px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.partners-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--primary-mid);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.partner-sheet {
+    overflow: hidden;
+}
+
+.partner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.partner-img.active {
+    opacity: 1;
+}
+
+.partner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    z-index: 2;
+}
+
+.partner-slide.active {
+    opacity: 1;
 }
 
 .hero-bottom-fade {
