@@ -827,9 +827,6 @@ section {
     transition: transform 0.3s ease;
 }
 
-.why-item:hover {
-    transform: translateX(8px);
-}
 
 .why-item:last-child {
     border-bottom: none;
