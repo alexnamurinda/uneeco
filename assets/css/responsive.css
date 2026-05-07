@@ -334,6 +334,8 @@
 
     body {
         padding-top: calc(var(--top-banner-height) + var(--navbar-height));
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     .top-banner-text {
