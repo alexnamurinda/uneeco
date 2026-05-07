@@ -37,8 +37,8 @@
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="assets/images/uneeco_logo.png" alt="Uneeco Logo"
                     class="img-fluid"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" id="navToggler" type="button"
+                aria-label="Toggle navigation" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -313,6 +313,23 @@
             </div> -->
         </div>
     </footer>
+
+    <!-- MOBILE SIDEBAR NAV -->
+    <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <div class="mobile-sidebar-header">
+            <img src="assets/images/uneeco_logo.png" alt="Uneeco Logo" class="mobile-sidebar-logo">
+            <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-sidebar-nav">
+            <a href="index.html" class="mobile-sidebar-link active">Home</a>
+            <a href="pages/products.html" class="mobile-sidebar-link">Products</a>
+            <a href="pages/about.html" class="mobile-sidebar-link">About Us</a>
+            <a href="pages/contact.html" class="mobile-sidebar-link">Contact</a>
+        </nav>
+    </div>
 
     <!-- External Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

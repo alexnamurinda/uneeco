@@ -90,3 +90,42 @@ if (cartBtn) {
         window.location.reload();
     });
 }
+
+// Mobile Sidebar Navigation
+(function () {
+    const navToggler = document.getElementById('navToggler');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+    const mobileSidebarClose = document.getElementById('mobileSidebarClose');
+
+    if (!navToggler || !mobileSidebar) return;
+
+    function openSidebar() {
+        mobileSidebar.classList.add('open');
+        if (mobileSidebarOverlay) mobileSidebarOverlay.classList.add('open');
+        mobileSidebar.setAttribute('aria-hidden', 'false');
+        navToggler.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+        mobileSidebar.classList.remove('open');
+        if (mobileSidebarOverlay) mobileSidebarOverlay.classList.remove('open');
+        mobileSidebar.setAttribute('aria-hidden', 'true');
+        navToggler.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    navToggler.addEventListener('click', openSidebar);
+
+    if (mobileSidebarClose) mobileSidebarClose.addEventListener('click', closeSidebar);
+    if (mobileSidebarOverlay) mobileSidebarOverlay.addEventListener('click', closeSidebar);
+
+    document.querySelectorAll('.mobile-sidebar-link').forEach(link => {
+        link.addEventListener('click', closeSidebar);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSidebar();
+    });
+})();

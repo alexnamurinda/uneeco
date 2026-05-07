@@ -10,6 +10,31 @@
 
 
 /* ══════════════════════════════════════════════
+   ALL MOBILE — Top banner overflow fix
+   Below 992px
+   ══════════════════════════════════════════════ */
+@media (max-width: 991.98px) {
+    /* Prevent text from pushing banner wider than viewport */
+    .top-banner-text {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .top-banner-socials {
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+    }
+
+    .top-banner-socials a {
+        margin-left: 0.5rem;
+    }
+}
+
+
+/* ══════════════════════════════════════════════
    LG — Tablets landscape / small laptops
    992px and below
    ══════════════════════════════════════════════ */
@@ -39,10 +64,6 @@
     .hero-visual {
         margin-top: 40px;
     }
-
-    .stat-divider {
-        display: none;
-    }
 }
 
 
@@ -52,17 +73,20 @@
    ══════════════════════════════════════════════ */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
+    :root {
+        --navbar-height: 4.5rem;
+    }
+
     body {
-        padding-top: calc(var(--top-banner-height) + 4.5rem);
+        padding-top: calc(var(--top-banner-height) + var(--navbar-height));
     }
 
     .top-banner-text {
-        font-size: 0.50rem;
-
+        font-size: 0.65rem;
     }
 
     .top-banner-socials a {
-        font-size: 0.50rem;
+        font-size: 0.65rem;
     }
 
     .navbar {
@@ -71,7 +95,8 @@
 
     /* Logo scale */
     .navbar-brand img {
-        height: 220px;
+        margin-top: -2.2rem;
+        height: 120px;
     }
 
     .navbar-icons {
@@ -80,6 +105,15 @@
         margin-right: 0;
         display: none;
         /* hide search/cart on small phones to save space */
+    }
+
+        .navbar-toggler {
+        margin-top: -2.2rem;
+        order: 3;
+        margin-left: 0.75rem;
+        border: none;
+        padding: 2px 6px;
+        font-size: 20px;
     }
 
     /* Hero text */
@@ -122,17 +156,20 @@
    ══════════════════════════════════════════════ */
 @media (min-width: 576px) and (max-width: 767.98px) {
 
+    :root {
+        --navbar-height: 4.5rem;
+    }
+
     body {
-        padding-top: calc(var(--top-banner-height) + 4.5rem);
+        padding-top: calc(var(--top-banner-height) + var(--navbar-height));
     }
 
     .top-banner-text {
-        font-size: 0.50rem;
-
+        font-size: 0.65rem;
     }
 
     .top-banner-socials a {
-        font-size: 0.50rem;
+        font-size: 0.65rem;
     }
 
     .navbar {
@@ -151,7 +188,8 @@
     }
 
     .navbar-brand img {
-        height: 150px;
+        height: 120px;
+        margin-top: -2.2rem;
     }
 
     .navbar-icons {
@@ -163,10 +201,12 @@
     }
 
     .navbar-toggler {
+        margin-top: -2.2rem;
         order: 3;
-        margin-left: 0.75rem;
+        margin-left: 0.85rem;
         border: none;
         padding: 2px 6px;
+        font-size: 18px;
     }
 
     /* Custom hamburger icon via Font Awesome */
@@ -288,17 +328,20 @@
    ══════════════════════════════════════════════ */
 @media (max-width: 575.98px) {
 
+    :root {
+        --navbar-height: 4rem;
+    }
+
     body {
-        padding-top: calc(var(--top-banner-height) + 4rem);
+        padding-top: calc(var(--top-banner-height) + var(--navbar-height));
     }
 
     .top-banner-text {
-        font-size: 0.40rem;
-
+        font-size: 0.65rem;
     }
 
     .top-banner-socials a {
-        font-size: 0.40rem;
+        font-size: 0.65rem;
     }
 
 
@@ -319,7 +362,8 @@
     }
 
     .navbar-brand img {
-        height: 80px;
+        margin-top: -2.2rem;
+        height: 110px;
     }
 
     .navbar-icons {
@@ -351,6 +395,7 @@
         margin-left: 0.5rem;
         border: none;
         padding: 2px 4px;
+        margin-top: -2.2rem;
     }
 
     /* Custom hamburger icon */
@@ -519,4 +564,110 @@
         height: 40px;
         font-size: 0.9rem;
     }
+}
+
+
+/* ══════════════════════════════════════════════
+   MOBILE SIDEBAR NAVIGATION
+   ══════════════════════════════════════════════ */
+.mobile-sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 26, 86, 0.45);
+    backdrop-filter: blur(3px);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-sidebar-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(80vw, 300px);
+    height: 100dvh;
+    background: var(--warm-white);
+    z-index: 2010;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.18);
+    overflow-y: auto;
+}
+
+.mobile-sidebar.open {
+    transform: translateX(0);
+}
+
+.mobile-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.mobile-sidebar-logo {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+}
+
+.mobile-sidebar-close {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-sidebar-close:hover {
+    background: var(--accent-pale);
+    color: var(--primary-mid);
+}
+
+.mobile-sidebar-nav {
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.mobile-sidebar-link {
+    display: block;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    border-left: 3px solid transparent;
+    transition: background 0.2s, color 0.2s, padding-left 0.2s, border-color 0.2s;
+}
+
+.mobile-sidebar-link:hover,
+.mobile-sidebar-link.active {
+    background: var(--accent-pale);
+    color: var(--primary-mid);
+    padding-left: 1.35rem;
+    border-left-color: var(--primary-mid);
 }
