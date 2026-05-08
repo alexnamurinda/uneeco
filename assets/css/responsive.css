@@ -329,13 +329,11 @@
 @media (max-width: 575.98px) {
 
     :root {
-        --navbar-height: 4rem;
+        --navbar-height: 4.3rem;
     }
 
     body {
         padding-top: calc(var(--top-banner-height) + var(--navbar-height));
-        max-width: 100vw;
-        overflow-x: hidden;
     }
 
     .top-banner-text {
