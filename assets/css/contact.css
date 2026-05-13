@@ -69,7 +69,7 @@
 }
 
 .badge-year {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
@@ -335,7 +335,7 @@
 }
 
 .form-wrapper-title {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: 1.65rem;
     font-weight: 700;
     color: var(--primary-dark);
@@ -516,7 +516,7 @@
 }
 
 .form-success h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     color: var(--primary-dark);
     font-size: 1.4rem;
     margin-bottom: 0.6rem;
@@ -665,7 +665,7 @@
 }
 
 .contact-cta h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 700;
     color: #fff;

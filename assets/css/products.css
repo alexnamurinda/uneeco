@@ -378,7 +378,7 @@
 }
 
 .prod-name {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: var(--primary-dark);
@@ -514,7 +514,7 @@
 }
 
 .cta-title {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     color: #fff;
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
@@ -605,7 +605,7 @@
 }
 
 .prod-modal-title {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 600;

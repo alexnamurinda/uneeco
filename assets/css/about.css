@@ -73,7 +73,7 @@
 }
 
 .badge-year {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
@@ -160,7 +160,7 @@
 }
 
 .about-pullquote p {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: 1.25rem;
     font-style: italic;
     color: var(--primary-dark);
@@ -227,7 +227,7 @@
 }
 
 .pillar-title {
-    font-family: 'Playfair Display', serif;
+    font-family: poppins, sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     color: #fff;
