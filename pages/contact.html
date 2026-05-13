@@ -489,6 +489,14 @@
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/scroll.js"></script>
     <script src="../assets/js/contact.js"></script>
+    <script>
+        if (window.location.hash === '#cf-message') {
+            window.addEventListener('load', function () {
+                var el = document.getElementById('cf-message');
+                if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.focus(); }
+            });
+        }
+    </script>
 </body>
 
 </html>

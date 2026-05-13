@@ -54,7 +54,7 @@
     background-image:
         linear-gradient(135deg, rgba(11, 26, 86, 0.88) 0%, rgba(11, 26, 86, 0.5) 55%, rgba(11, 26, 86, 0.15) 100%),
         linear-gradient(135deg, #0b1a56 0%, #1a2f7a1a 50%, #2d499e06 100%),
-        url('../images/inks.webp');
+        url('../images/inks.png');
 }
 
 .hero-slide-overlay {

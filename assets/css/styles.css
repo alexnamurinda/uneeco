@@ -492,12 +492,12 @@ body {
 
 .paper-logo-mark {
     background: transparent;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
 .paper-logo-mark img {
     max-width: 170px;
-    max-height: 72px;
+    max-height: 80px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -505,7 +505,7 @@ body {
 }
 
 .partners-label {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
