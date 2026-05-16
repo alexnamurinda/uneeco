@@ -456,6 +456,11 @@
     text-decoration: underline;
 }
 
+/* reCAPTCHA */
+.cf-recaptcha {
+    margin-bottom: 1.25rem;
+}
+
 /* Submit button */
 .cf-submit {
     width: 100%;

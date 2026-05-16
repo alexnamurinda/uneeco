@@ -45,31 +45,32 @@ const form = document.getElementById('contactForm');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Basic required field validation
-    const name = document.getElementById('cf-name').value.trim();
     const email = document.getElementById('cf-email').value.trim();
+    const whatsapp = document.getElementById('cf-whatsapp').value.trim();
     const subject = document.getElementById('cf-subject').value;
     const message = document.getElementById('cf-message').value.trim();
-    const consent = document.getElementById('cf-consent').checked;
 
-    if (!name || !email || !subject || !message || !consent) {
-        // Highlight empty required fields
-        [document.getElementById('cf-name'),
-        document.getElementById('cf-email'),
-        document.getElementById('cf-subject'),
-        document.getElementById('cf-message')].forEach(el => {
+    if (!email || !whatsapp || !subject || !message) {
+        [document.getElementById('cf-email'),
+         document.getElementById('cf-whatsapp'),
+         document.getElementById('cf-subject'),
+         document.getElementById('cf-message')].forEach(el => {
             if (!el.value.trim()) {
                 el.style.borderColor = '#e05';
                 el.addEventListener('input', () => el.style.borderColor = '', { once: true });
             }
         });
-        if (!consent) {
-            document.getElementById('cf-consent').style.outline = '2px solid #e05';
-        }
         return;
     }
 
-    // Simulate submission (replace with real fetch/API call)
+    if (!grecaptcha.getResponse()) {
+        const rc = document.querySelector('.cf-recaptcha');
+        rc.style.outline = '2px solid #e05';
+        rc.style.borderRadius = '8px';
+        setTimeout(() => rc.style.outline = '', 2000);
+        return;
+    }
+
     const btn = form.querySelector('.cf-submit');
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
     btn.disabled = true;
