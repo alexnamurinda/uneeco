@@ -8,6 +8,11 @@
      xs  : 0–575px    (small phones)
    ============================================================ */
 
+@keyframes banner-scroll {
+    0%   { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
 
 /* ══════════════════════════════════════════════
    ALL MOBILE — Top banner overflow fix
@@ -30,6 +35,30 @@
 
     .top-banner-socials a {
         margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-banner .container {
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        display: block !important;
+    }
+
+    .top-banner-socials {
+        display: none !important;
+    }
+
+    .top-banner-text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: unset;
+        text-overflow: clip;
+        flex: unset;
+        min-width: unset;
+        animation: banner-scroll 22s linear infinite;
     }
 }
 
