@@ -342,53 +342,64 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq3">
-                                    What payment methods do you accept?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We accept mobile money (MTN & Airtel), bank transfers, and cash on collection. For
-                                    institutional clients we can arrange invoicing with agreed payment terms.
+                        <!-- Hidden FAQs (3–5) -->
+                        <div id="faqExtra" style="display:none;">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq3">
+                                        What payment methods do you accept?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We accept mobile money (MTN & Airtel), bank transfers, and cash on collection. For
+                                        institutional clients we can arrange invoicing with agreed payment terms.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq4">
-                                    How quickly will you respond to my enquiry?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We aim to respond to all enquiries within 24 hours on business days. For urgent
-                                    matters, please call us directly or reach us via WhatsApp.
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq4">
+                                        How quickly will you respond to my enquiry?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We aim to respond to all enquiries within 24 hours on business days. For urgent
+                                        matters, please call us directly or reach us via WhatsApp.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq5">
-                                    Can I visit your premises to view products?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Absolutely. Our Kampala office is open Monday to Friday 8 AM–6 PM and Saturdays 9
-                                    AM–2 PM. We recommend calling ahead so we can have the right team member available
-                                    for you.
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq5">
+                                        Can I visit your premises to view products?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Absolutely. Our Kampala office is open Monday to Friday 8 AM–6 PM and Saturdays 9
+                                        AM–2 PM. We recommend calling ahead so we can have the right team member available
+                                        for you.
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+                    <!-- View All / Show Less toggle -->
+                    <div class="text-center mt-4">
+                        <button class="faq-toggle-btn" id="faqToggleBtn" onclick="toggleFaq()">
+                            View All <i class="fas fa-chevron-down ms-1"></i>
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -424,22 +435,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-2">
-                    <div class="footer-heading">Products</div>
-                    <a href="products.html#large-format" class="footer-link">Large Format</a>
-                    <a href="products.html#art-paper" class="footer-link">Art Paper &amp; Board</a>
-                    <a href="products.html#offset-sundries" class="footer-link">Offset Sundries</a>
-                    <a href="products.html#inks" class="footer-link">Inks &amp; Chemicals</a>
-                    <!-- <a href="products.html#plates" class="footer-link">Plates</a> -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="footer-heading">Contact</div>
-                    <a href="tel:+256703650311" class="footer-link"><i class="fas fa-phone-alt me-2"
-                            style="font-size:0.75rem;color:var(--primary-light);"></i>+256 703 650 311</a>
-                    <a href="mailto:info@uneeco.co.ug" class="footer-link"><i class="fas fa-envelope me-2"
-                            style="font-size:0.75rem;color:var(--primary-light);"></i>info@uneeco.co.ug</a>
-                    <span class="footer-link"><i class="fas fa-map-marker-alt me-2"
-                            style="font-size:0.75rem;color:var(--primary-light);"></i>Kampala, Uganda</span>
+                <div class="col-lg-5">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="footer-heading">Products</div>
+                            <a href="products.html#large-format" class="footer-link">Large Format</a>
+                            <a href="products.html#art-paper" class="footer-link">Art Paper &amp; Board</a>
+                            <a href="products.html#offset-sundries" class="footer-link">Offset Sundries</a>
+                            <a href="products.html#inks" class="footer-link">Inks &amp; Chemicals</a>
+                            <!-- <a href="products.html#plates" class="footer-link">Plates</a> -->
+                        </div>
+                        <div class="col-6">
+                            <div class="footer-heading">Contact</div>
+                            <a href="tel:+256703650311" class="footer-link"><i class="fas fa-phone-alt me-2"
+                                    style="font-size:0.75rem;color:var(--primary-light);"></i>+256 703 650 311</a>
+                            <a href="mailto:info@uneeco.co.ug" class="footer-link"><i class="fas fa-envelope me-2"
+                                    style="font-size:0.75rem;color:var(--primary-light);"></i>info@uneeco.co.ug</a>
+                            <span class="footer-link"><i class="fas fa-map-marker-alt me-2"
+                                    style="font-size:0.75rem;color:var(--primary-light);"></i>Kampala, Uganda</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- <hr class="footer-divider">
@@ -483,6 +498,17 @@
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/scroll.js"></script>
     <script src="../assets/js/contact.js"></script>
+    <script>
+        function toggleFaq() {
+            const extra = document.getElementById('faqExtra');
+            const btn   = document.getElementById('faqToggleBtn');
+            const open  = extra.style.display === 'block';
+            extra.style.display = open ? 'none' : 'block';
+            btn.innerHTML = open
+                ? 'View All <i class="fas fa-chevron-down ms-1"></i>'
+                : 'Show Less <i class="fas fa-chevron-up ms-1"></i>';
+        }
+    </script>
     <script>
         if (window.location.hash === '#cf-email') {
             window.addEventListener('load', function () {

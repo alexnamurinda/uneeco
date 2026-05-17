@@ -43,11 +43,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: var(--top-banner-height);
     background: var(--logo-dark-blue);
     color: #fff;
     padding: 0.25rem 0;
     z-index: 1040;
     transition: transform 0.4s ease;
+    overflow: hidden;
 }
 
 .top-banner-text {

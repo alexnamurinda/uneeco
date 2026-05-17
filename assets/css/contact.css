@@ -637,6 +637,27 @@
     background: var(--accent-pale);
 }
 
+/* ── FAQ TOGGLE BUTTON ── */
+.faq-toggle-btn {
+    background: none;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 10px 28px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--primary-mid);
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.faq-toggle-btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #fff;
+}
+
 /* ── CTA SECTION ── */
 .contact-cta {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--logo-dark-blue) 100%);

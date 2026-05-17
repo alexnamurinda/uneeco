@@ -100,12 +100,57 @@ if (cartBtn) {
 
     if (!navToggler || !mobileSidebar) return;
 
+    // Inject search bar between header and nav
+    const sidebarNav = mobileSidebar.querySelector('.mobile-sidebar-nav');
+    if (sidebarNav && !mobileSidebar.querySelector('.mobile-sidebar-search')) {
+        const searchBlock = document.createElement('div');
+        searchBlock.className = 'mobile-sidebar-search';
+        searchBlock.innerHTML = `
+            <div class="mobile-search-wrap">
+                <i class="fas fa-search mobile-search-icon"></i>
+                <input type="text" class="mobile-search-input" id="mobileSidebarSearchInput"
+                    placeholder="Search products…" autocomplete="off" spellcheck="false">
+                <button class="mobile-search-clear" id="mobileSidebarSearchClear" aria-label="Clear" style="display:none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>`;
+        mobileSidebar.insertBefore(searchBlock, sidebarNav);
+
+        const input = document.getElementById('mobileSidebarSearchInput');
+        const clearBtn = document.getElementById('mobileSidebarSearchClear');
+
+        input.addEventListener('input', function () {
+            clearBtn.style.display = this.value ? 'flex' : 'none';
+        });
+
+        clearBtn.addEventListener('click', function () {
+            input.value = '';
+            clearBtn.style.display = 'none';
+            input.focus();
+        });
+
+        function doMobileSearch() {
+            const q = input.value.trim();
+            if (!q) return;
+            const inPages = window.location.pathname.includes('/pages/');
+            window.location.href = (inPages ? 'search.html' : 'pages/search.html')
+                + '?q=' + encodeURIComponent(q);
+        }
+
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') doMobileSearch();
+        });
+    }
+
     function openSidebar() {
         mobileSidebar.classList.add('open');
         if (mobileSidebarOverlay) mobileSidebarOverlay.classList.add('open');
         mobileSidebar.setAttribute('aria-hidden', 'false');
         navToggler.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
+        // Focus the search input after the slide-in animation
+        const input = document.getElementById('mobileSidebarSearchInput');
+        if (input) setTimeout(() => input.focus(), 360);
     }
 
     function closeSidebar() {
