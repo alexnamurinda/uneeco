@@ -3,12 +3,12 @@
 // Fill these in after creating the email account in Namecheap cPanel
 define('SMTP_HOST',      'mail.uneeco.co.ug');
 define('SMTP_PORT',      465);
-define('SMTP_USER',      'noreply@uneeco.co.ug');   // cPanel email you create
-define('SMTP_PASS',      'YOUR_EMAIL_PASSWORD');      // cPanel email password
+define('SMTP_USER',      'noreply@uneeco.store');   // cPanel email you create
+define('SMTP_PASS',      'BDO@Email123');      // cPanel email password
 define('MAIL_TO',        'info@uneeco.co.ug');
-define('MAIL_FROM',      'noreply@uneeco.co.ug');
+define('MAIL_FROM',      'noreply@uneeco.store');
 define('MAIL_FROM_NAME', 'Uneeco Website');
-define('RECAPTCHA_SECRET', 'YOUR_RECAPTCHA_SECRET_KEY'); // from Google reCAPTCHA console
+define('RECAPTCHA_SECRET', '6LcDLvAsAAAAAMnOJol4faUUVbDm8aVz6PT2L4CB'); // from Google reCAPTCHA console
 // ──────────────────────────────────────────────────────────────────────────
 
 header('Content-Type: application/json');
