@@ -75,16 +75,38 @@ form.addEventListener('submit', function (e) {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
     btn.disabled = true;
 
-    setTimeout(() => {
-        document.getElementById('formView').style.display = 'none';
-        const success = document.getElementById('formSuccess');
-        success.style.display = 'block';
-        success.style.opacity = 0;
-        requestAnimationFrame(() => {
-            success.style.transition = 'opacity 0.5s ease';
-            success.style.opacity = 1;
+    const formData = new FormData();
+    formData.append('email',     email);
+    formData.append('whatsapp',  whatsapp);
+    formData.append('subject',   subject);
+    formData.append('message',   message);
+    formData.append('recaptcha', grecaptcha.getResponse());
+
+    fetch('../send-mail.php', { method: 'POST', body: formData })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('formView').style.display = 'none';
+                const success = document.getElementById('formSuccess');
+                success.style.display = 'block';
+                success.style.opacity = 0;
+                requestAnimationFrame(() => {
+                    success.style.transition = 'opacity 0.5s ease';
+                    success.style.opacity = 1;
+                });
+            } else {
+                btn.innerHTML = 'Send Message <i class="fas fa-arrow-right"></i>';
+                btn.disabled = false;
+                alert(data.message || 'Something went wrong. Please try again.');
+                grecaptcha.reset();
+            }
+        })
+        .catch(() => {
+            btn.innerHTML = 'Send Message <i class="fas fa-arrow-right"></i>';
+            btn.disabled = false;
+            alert('Network error. Please check your connection and try again.');
+            grecaptcha.reset();
         });
-    }, 1400);
 });
 
 function resetForm() {
