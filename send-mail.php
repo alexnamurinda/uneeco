@@ -1,8 +1,8 @@
 <?php
 // ── SMTP Configuration ─────────────────────────────────────────────────────
 // Fill these in after creating the email account in Namecheap cPanel
-define('SMTP_HOST',      'mail.uneeco.store');
-define('SMTP_PORT',      587);
+define('SMTP_HOST',      'localhost');
+define('SMTP_PORT',      25);
 define('SMTP_USER',      'noreply@uneeco.store');
 define('SMTP_PASS',      'BDO@Email123');
 define('MAIL_TO',        'info@uneeco.co.ug');
@@ -71,16 +71,13 @@ $mail = new PHPMailer(true);
 try {
     $mail->isSMTP();
     $mail->Host       = SMTP_HOST;
-    $mail->SMTPAuth   = true;
-    $mail->Username   = SMTP_USER;
-    $mail->Password   = SMTP_PASS;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->SMTPAuth   = false;
+    $mail->SMTPSecure = '';
     $mail->Port       = SMTP_PORT;
 
     $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
     $mail->addAddress(MAIL_TO);
-    $mail->addCC('bd@uneeco.co.ug');
-    $mail->addReplyTo($email);
+    $mail->addReplyTo($email); // reply goes directly to the enquirer
 
     $mail->isHTML(true);
     $mail->Subject = '[Uneeco Website] ' . $subjectLabel;
