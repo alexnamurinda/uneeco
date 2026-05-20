@@ -77,6 +77,7 @@ try {
 
     $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
     $mail->addAddress(MAIL_TO);
+    $mail->addCC('bd@uneeco.co.ug');
     $mail->addReplyTo($email); // reply goes directly to the enquirer
 
     $mail->isHTML(true);
