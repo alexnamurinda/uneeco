@@ -81,11 +81,11 @@ try {
     $mail->addReplyTo($email); // reply goes directly to the enquirer
 
     $mail->isHTML(true);
-    $mail->Subject = '[Uneeco Website] ' . $subjectLabel;
+    $mail->Subject = $subjectLabel;
     $mail->Body    = "
         <div style='font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#333;'>
-            <div style='background:#1a3c2e;padding:24px 32px;border-radius:8px 8px 0 0;'>
-                <h2 style='color:#fff;margin:0;font-size:1.3rem;'>New Enquiry — Uneeco Website</h2>
+            <div style='background:#1a3c2e;padding:15px 20px;border-radius:8px 8px 0 0;'>
+                <h2 style='color:#fff;margin:0;font-size:1.1rem;'>New Enquiry at Uneeco's Website</h2>
             </div>
             <div style='background:#f9f9f9;padding:24px 32px;border-radius:0 0 8px 8px;border:1px solid #e5e5e5;'>
                 <table style='width:100%;border-collapse:collapse;font-size:0.95rem;'>
@@ -107,12 +107,12 @@ try {
                     </tr>
                 </table>
                 <p style='margin-top:24px;font-size:0.8rem;color:#999;'>
-                    Sent via the contact form at uneeco.co.ug. Reply directly to this email to respond to the enquirer.
+                    Sent via the contact form at uneeco.co.ug.
                 </p>
             </div>
         </div>
     ";
-    $mail->AltBody = "New Enquiry — Uneeco Website\n\nFrom: $email\nWhatsApp: $whatsapp\nSubject: $subjectLabel\n\n$message";
+    $mail->AltBody = "New Enquiry at Uneeco's Website\n\nFrom: $email\nWhatsApp: $whatsapp\nSubject: $subjectLabel\n\n$message";
 
     $mail->send();
     echo json_encode(['success' => true]);
