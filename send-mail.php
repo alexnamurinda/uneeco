@@ -2,13 +2,13 @@
 // ── SMTP Configuration ─────────────────────────────────────────────────────
 // Fill these in after creating the email account in Namecheap cPanel
 define('SMTP_HOST',      'mail.uneeco.store');
-define('SMTP_PORT',      465);
-define('SMTP_USER',      'noreply@uneeco.store');   // cPanel email you create
-define('SMTP_PASS',      'BDO@Email123');      // cPanel email password
+define('SMTP_PORT',      587);
+define('SMTP_USER',      'noreply@uneeco.store');
+define('SMTP_PASS',      'BDO@Email123');
 define('MAIL_TO',        'info@uneeco.co.ug');
 define('MAIL_FROM',      'noreply@uneeco.store');
 define('MAIL_FROM_NAME', 'Uneeco Website');
-define('RECAPTCHA_SECRET', '6LcDLvAsAAAAAMnOJol4faUUVbDm8aVz6PT2L4CB'); // from Google reCAPTCHA console
+define('RECAPTCHA_SECRET', '6LcDLvAsAAAAAMnOJol4faUUVbDm8aVz6PT2L4CB');
 // ──────────────────────────────────────────────────────────────────────────
 
 header('Content-Type: application/json');
@@ -74,12 +74,13 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = SMTP_USER;
     $mail->Password   = SMTP_PASS;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = SMTP_PORT;
 
     $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
     $mail->addAddress(MAIL_TO);
-    $mail->addReplyTo($email); // reply goes directly to the enquirer
+    $mail->addCC('bd@uneeco.co.ug');
+    $mail->addReplyTo($email);
 
     $mail->isHTML(true);
     $mail->Subject = '[Uneeco Website] ' . $subjectLabel;
@@ -120,5 +121,5 @@ try {
 
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'Could not send your message. Please try again or contact us directly.']);
+    echo json_encode(['success' => false, 'message' => 'DEBUG: ' . $e->getMessage()]);
 }
