@@ -1,160 +1,130 @@
-# Uneeco Uganda - Website
+# Uneeco Uganda Limited — Website
 
-Professional paper supply company website for Uneeco Uganda built with Bootstrap 5, custom CSS, and vanilla JavaScript.
+Official website for **Uneeco Uganda Limited**, one of East Africa's leading suppliers to the print and packaging industry. Built with Bootstrap 5, custom CSS, and vanilla JavaScript.
+
+---
 
 ## Project Structure
 
 ```
-test/
-├── index.html                 # Homepage with hero, products, and CTA sections
-├── css/
-│   └── styles.css            # All global and component styles
-├── js/
-│   ├── animations.js         # AOS (Animate On Scroll) initialization
-│   ├── navbar.js             # Navbar scroll effects and mobile menu
-│   └── scroll.js             # Back to top button and smooth scrolling
+uneeco/
+├── index.html                      # Homepage
+├── send-mail.php                   # Contact form mail handler (backend)
 ├── pages/
-│   ├── products.html         # Full product catalog page
-│   ├── about.html            # Company information and values
-│   └── contact.html          # Contact form and business info
+│   ├── products.html               # Full product catalogue
+│   ├── about.html                  # Company story, mission & values
+│   ├── contact.html                # Contact form, map & FAQ
+│   └── search.html                 # Search results page
 ├── includes/
-│   ├── navbar.html           # Reusable navbar component
-│   └── footer.html           # Reusable footer component
-└── assets/                   # Future: Images, icons, etc.
+│   ├── navbar.html                 # Navbar component reference
+│   └── footer.html                 # Footer component reference
+└── assets/
+    ├── css/
+    │   ├── styles.css              # Global styles & brand variables
+    │   ├── responsive.css          # Breakpoint & mobile overrides
+    │   ├── about.css               # About page styles
+    │   ├── contact.css             # Contact page styles
+    │   └── products.css            # Products page styles
+    ├── js/
+    │   ├── animations.js           # AOS initialization
+    │   ├── navbar.js               # Sticky navbar & mobile sidebar
+    │   ├── scroll.js               # Back-to-top button
+    │   └── contact.js              # Contact form validation & submission
+    └── images/                     # Logos, product & partner images
 ```
-
-## Features
-
-### 🎨 Design
-- Modern, professional design with green and gold color scheme
-- Fully responsive (mobile, tablet, desktop)
-- Smooth animations and transitions
-- AOS (Animate On Scroll) library for scroll-triggered animations
-
-### ⚡ Functionality
-- Sticky navbar with scroll detection
-- Smooth scroll navigation for anchor links
-- Mobile-responsive hamburger menu
-- Back-to-top button (appears after scrolling 300px)
-- Product showcase with hover effects
-- Contact form layout
-- Footer with navigation and company info
-
-### 📁 Organization
-- **Separated concerns:** HTML, CSS, and JavaScript in different files
-- **Modular JavaScript:** Each functionality in its own file
-- **Reusable components:** Navbar and footer include files
-- **Professional structure:** Easy to maintain and scale
-
-## File Descriptions
-
-### HTML Files
-- **index.html** - Main landing page with hero section, stats, products, why us section, CTA, and footer
-- **pages/products.html** - Dedicated products page
-- **pages/about.html** - Company story, mission, and values
-- **pages/contact.html** - Contact information and form
-
-### CSS
-- **css/styles.css** - All styling including:
-  - CSS variables for colors
-  - Navbar and hero styles
-  - Product cards
-  - Responsive design (mobile-first)
-  - Button styles
-  - Footer styling
-
-### JavaScript
-- **js/animations.js** - Initializes AOS library for scroll animations
-- **js/navbar.js** - Handles navbar scroll effects and mobile menu collapse
-- **js/scroll.js** - Back to top button visibility and smooth scrolling for anchor links
-
-## How to Use
-
-### Development
-1. Open `index.html` in your browser to view the site
-2. All files are organized and ready to edit
-3. Modify `css/styles.css` for styling changes
-4. Update JavaScript files for functionality changes
-
-### Deployment
-1. Upload entire folder to your web server
-2. Ensure file paths are correct if deploying to a subdirectory
-3. Test all navigation links and functionality
-
-### Customization
-
-#### Change Colors
-Edit the CSS variables in `css/styles.css`:
-```css
-:root {
-    --green-dark: #1a3d2b;
-    --green-mid: #2c6644;
-    --green-light: #4a9e68;
-    --gold: #b08d57;
-    /* ... other colors */
-}
-```
-
-#### Add New Pages
-1. Create new HTML file in `pages/` folder
-2. Copy the structure from existing pages
-3. Update navbar links accordingly
-4. Link external CSS and JS files with correct paths
-
-#### Modify Navbar Links
-Update links in index.html and all page files to add/remove navigation items
-
-## Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with flexbox and grid
-- **Bootstrap 5** - Responsive grid system
-- **Font Awesome 6** - Icon library
-- **AOS Library** - Scroll animations
-- **Vanilla JavaScript** - No frameworks, pure JS
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## Performance Optimizations
-
-- External CSS file (faster rendering)
-- Modular JavaScript files (only load what's needed)
-- CDN for libraries (Bootstrap, Font Awesome, AOS)
-- Responsive images and lazy loading ready
-- Smooth scroll behavior
-
-## Future Enhancements
-
-- Add actual product images to assets folder
-- Integrate contact form with backend
-- Add blog section
-- Implement search functionality
-- Add testimonials section
-- Create sitemap.xml
-- Add Google Analytics
-
-## Notes
-
-- All links are currently pointing to sections on pages or other pages
-- Contact form is static (requires backend integration to actually send)
-- Update phone numbers and emails in all files with real contact info
-- Replace placeholder content with actual company information
-
-## File Paths Reference
-
-- From `index.html` to `css/styles.css` → `css/styles.css` ✓
-- From `pages/products.html` to `css/styles.css` → `../css/styles.css` ✓
-- From `pages/products.html` to `index.html` → `../index.html` ✓
-- From `pages/products.html` to `js/animations.js` → `../js/animations.js` ✓
 
 ---
 
-**Version:** 1.0  
-**Last Updated:** 2025  
-**Status:** Production Ready ✓
+## Pages
+
+| Page | Path | Description |
+|------|------|-------------|
+| Home | `index.html` | Hero, product highlights, Why Us stats, partner showcase |
+| Products | `pages/products.html` | Full catalogue — paper, inks, plates, sundries, large format |
+| About | `pages/about.html` | Company story (est. 1984), mission, vision, values |
+| Contact | `pages/contact.html` | Contact form, Google Maps embed, business hours, FAQ |
+
+---
+
+## Features
+
+- Fully responsive — mobile, tablet, desktop
+- Sticky navbar with scroll-triggered styling
+- Mobile slide-in sidebar navigation
+- Floating chat widget (WhatsApp, email, call)
+- AOS scroll-triggered animations
+- Contact form with Google reCAPTCHA v2 and PHP mail handler (`send-mail.php`)
+- Google Maps embed on contact page
+- FAQ accordion with show/hide toggle
+- Back-to-top button
+- SEO meta descriptions on all pages
+- Favicon linked via brand logo
+
+---
+
+## Technologies
+
+| Library / Tool | Version | Purpose |
+|----------------|---------|---------|
+| Bootstrap | 5.3.0 | Grid, components |
+| Font Awesome | 6.4.0 | Icons |
+| AOS | 2.3.4 | Scroll animations |
+| Google Fonts | — | Playfair Display, DM Sans |
+| Google reCAPTCHA | v2 | Contact form spam protection |
+| Vanilla JavaScript | — | All interactivity |
+| PHP | — | Contact form mail handler |
+
+---
+
+## Local Development
+
+Requires a local server (XAMPP, Laragon, etc.) because of the PHP mail handler.
+
+1. Place the `uneeco/` folder inside your server's `htdocs` (XAMPP) or `www` directory
+2. Start Apache in your server control panel
+3. Open `http://localhost/uneeco/` in your browser
+
+---
+
+## Customisation
+
+### Brand Colors
+Edit CSS variables at the top of `assets/css/styles.css`:
+```css
+:root {
+    --primary:        #1a3d2b;
+    --primary-mid:    #2c6644;
+    --primary-light:  #4a9e68;
+    --accent:         #b08d57;
+}
+```
+
+### Adding a New Page
+1. Duplicate the closest existing page (e.g. `contact.html`)
+2. Update the `<title>` and `<meta name="description">`
+3. Set the correct `active` class on the navbar link
+4. Update `href` paths — pages inside `pages/` reference assets as `../assets/`
+
+### Contact Form
+The form posts to `send-mail.php`. Update the recipient address at the top of that file to change where enquiries are delivered.
+
+---
+
+## Deployment
+
+1. Upload the entire `uneeco/` folder to your web host via FTP or cPanel File Manager
+2. Ensure the server supports PHP (required for `send-mail.php`)
+3. Confirm the `send-mail.php` recipient email is correct before going live
+4. Test the contact form end-to-end after deployment
+
+---
+
+## Browser Support
+
+Chrome, Firefox, Safari, Edge (latest versions) · iOS Safari · Android Chrome
+
+---
+
+**Version:** 2.0
+**Last Updated:** 2025
+**Status:** Production Ready
