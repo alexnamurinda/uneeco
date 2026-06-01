@@ -44,11 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
         var busy      = false;
         var SLIDE_MS  = 550;
 
-        var ITEM_MARGIN = 16; // 8px each side (matches CSS margin: 0 8px)
-        var VISIBLE    = 5;  // logos shown at once
+        var ITEM_MARGIN = 40; // 20px each side (matches CSS margin: 0 20px)
+
+        function getVisible() {
+            var vw = wrapper.offsetWidth;
+            if (vw >= 992) return 4;   // desktop  — 4 logos, 1 always off-screen
+            if (vw >= 600) return 3;   // tablet
+            return 2;                  // mobile
+        }
 
         function slotWidth() {
-            return wrapper.offsetWidth / VISIBLE;
+            return wrapper.offsetWidth / getVisible();
         }
 
         function applyWidths() {

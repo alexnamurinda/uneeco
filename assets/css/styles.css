@@ -968,18 +968,18 @@ section {
 /* ── CLIENTS ── */
 .clients-section {
     background: var(--cream);
-    padding: 40px 0 50px;
+    padding: 24px 0 30px;
 }
 
 .clients-section .text-center {
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 0.75rem !important;
 }
 
 .clients-wrapper {
     overflow: hidden;
     position: relative;
-    padding: 8px 0;
-    margin-top: 6px;
+    padding: 6px 0;
+    margin-top: 4px;
 }
 
 .clients-wrapper::before,
@@ -1009,19 +1009,17 @@ section {
 }
 
 .client-logo-item {
-    flex: 0 0 20%; /* JS overrides this; fallback shows 5 */
-    aspect-ratio: 1 / 1;
-    margin: 0 8px;
+    flex: 0 0 25%; /* JS overrides this */
+    aspect-ratio: 5 / 3;  /* landscape — better for logos */
+    margin: 0 20px;
     padding: 0;
-    border-radius: 14px;
     overflow: hidden;
-    border: 1px solid var(--border);
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .client-logo-item:hover {
-    box-shadow: 0 8px 24px rgba(11, 26, 86, 0.12);
     transform: translateY(-4px);
+    opacity: 0.85;
 }
 
 .client-logo-item img {
