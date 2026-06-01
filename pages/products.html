@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Uneeco Uganda Limited</title>
     <meta name="description" content="Browse Uneeco Uganda's full product range — paper and board, inks and chemicals, offset sundries, large format media, sticker paper and more. Quality printing supplies across East Africa.">
-    <link rel="icon" type="image/png" href="../assets/images/uneeco_logo.png">
+    <link rel="icon" type="image/png" href="../assets/images/uneeco_logo.webp">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -38,8 +40,8 @@
     <nav class="navbar navbar-expand-lg fixed-top">
 
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img src="../assets/images/uneeco_logo.png" alt="Uneeco Logo"
-                    class="img-fluid"></a>
+            <a class="navbar-brand" href="../index.html"><img src="../assets/images/uneeco_logo.webp" alt="Uneeco Logo"
+                    class="img-fluid" fetchpriority="high"></a>
             <button class="navbar-toggler collapsed" id="navToggler" type="button"
                 aria-label="Toggle navigation" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
@@ -214,7 +216,7 @@
                         data-category="Large Format"
                         data-desc="High-opacity PVC flex banner ideal for outdoor signage. 440gsm glossy finish for vivid colour reproduction."
                         data-specs="Width: 1.1m | Roll: 50m | Weight: 440gsm | Finish: Glossy">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/banner\ 3.2m.jpg')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/banner 3.2m.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">PVC Flex Banner</span>
@@ -231,7 +233,7 @@
                         data-category="Large Format"
                         data-desc="General-purpose self-adhesive vinyl for vehicle wraps, window graphics and signage."
                         data-specs="Width: 1.27m | Roll: 50m | Weight: 140gsm | Finish: Gloss">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/selfadhesive.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/selfadhesive.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Self Adhesive Vinyl</span>
@@ -247,7 +249,7 @@
                         data-category="Large Format"
                         data-desc="Pull-up banner material with grey backing, ideal for roll-up and retractable stand displays."
                         data-specs="Width: 0.914m | Roll: 50m | Weight: 330gsm | Finish: Matt | Back: Grey">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/pull\ up.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/pull up.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Pull Up Material</span>
@@ -444,7 +446,7 @@
                         data-category="Art Paper/Board"
                         data-desc="Mid-weight matt art paper popular for leaflets, flyers and magazine inserts."
                         data-specs="Weight: 115gsm | Size: 63.5×91.4cm | Finish: MATT">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/matt\ 115.avif')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/matt 115.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Art Paper</span>
@@ -460,7 +462,7 @@
                         data-category="Art Paper/Board"
                         data-desc="Gloss-coated art board for covers, packaging and point-of-sale displays."
                         data-specs="Weight: 250gsm | Size: 63.5×91.4cm | Finish: Gloss">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/artboard.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/artboard.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Art Board</span>
@@ -476,7 +478,7 @@
                         data-category="Art Paper/Board"
                         data-desc="Heavy gloss art paper for catalogues, high-quality brochures and calendars."
                         data-specs="Weight: 130gsm | Size: 63.5×91.4cm | Finish: Gloss | Pack: 250 sheets">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/130\ gloss.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/130 gloss.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Art Paper</span>
@@ -651,7 +653,7 @@
                         data-category="Offset Sundries"
                         data-desc="Barred printing blanket compatible with Heidelberg SpeedMaster 74CD presses."
                         data-specs="Size: 772×700×1.95mm | Type: Barred | Compatible: HDM SM74CD">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/blanket.webp')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/blanket.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Printing Blanket</span>
@@ -667,7 +669,7 @@
                         data-category="Offset Sundries"
                         data-desc="Red PVC wavy-profile cutting stick for Polar 115 guillotines."
                         data-specs="Size: 1160×10×4.5mm | Colour: Red | Profile: Wavy | Machine: Polar 115">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/stick.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/stick.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Cutting Stick</span>
@@ -683,8 +685,7 @@
                         data-category="Offset Sundries"
                         data-desc="Dual-tip deletion pen for correcting plates and photopolymer films on-press."
                         data-specs="Tips: Fine &amp; Large | Application: Plate correction">
-                        <div class="prod-card-icon"
-                            style="background-image: url('../assets/images/deletion\ pen.jpeg')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/deletion pen.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Plate Correction</span>
@@ -812,7 +813,7 @@
                     <div class="prod-card" data-product="Titan Premium Process Cyan" data-category="Inks"
                         data-desc="Premium quality process cyan ink for high-fidelity CMYK offset printing."
                         data-specs="Colour: Cyan | Series: Titan Premium | Application: Offset process printing">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/cyan.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/cyan.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Process Ink</span>
@@ -827,7 +828,7 @@
                     <div class="prod-card" data-product="Titan Premium Process Magenta" data-category="Inks"
                         data-desc="Premium magenta process ink delivering clean, accurate colour reproduction."
                         data-specs="Colour: Magenta | Series: Titan Premium | Application: Offset process printing">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/mixink.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/mixink.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Process Ink</span>
@@ -842,7 +843,7 @@
                     <div class="prod-card" data-product="Plate Cleaner Solution" data-category="Press Chemicals"
                         data-desc="High-performance plate cleaner designed to remove ink residues, oxidation, and contaminants from printing plates while maintaining image integrity."
                         data-specs="Type: Plate Cleaner | Application: Offset Printing | Use: Plate maintenance & restoration">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/platecleaner.png')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/platecleaner.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Press Chemical</span>
@@ -921,7 +922,7 @@
                     <div class="prod-card" data-product="CtCP UV Plates 550 X 650 X 0.30mm" data-category="Plates"
                         data-desc="CtCP UV printing plates for computer-to-conventional-plate systems."
                         data-specs="Size: 550×650mm | Thickness: 0.30mm | Type: CtCP UV">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/plate.jpg')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/plate.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">CtCP UV Plate</span>
@@ -936,7 +937,7 @@
                     <div class="prod-card" data-product="CTP Thermal Plates 790 X 1030 X 0.30mm" data-category="Plates"
                         data-desc="Thermal CTP plates for computer-to-plate systems — precise imaging with excellent run lengths."
                         data-specs="Size: 790×1030mm | Thickness: 0.30mm | Type: CTP Thermal">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/plates.avif')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/plates.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">CTP Thermal Plate</span>
@@ -951,7 +952,7 @@
                     <div class="prod-card" data-product="NEOS 112 42 inches x 60 inches x 2.84mm" data-category="Plates"
                         data-desc="NEOS 112 photopolymer plate for flexographic and letterpress printing applications."
                         data-specs="Size: 42″×60″ | Thickness: 2.84mm | Type: NEOS 112">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/neos.jpg')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/neos.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">NEOS Plate</span>
@@ -984,7 +985,7 @@
                     <div class="prod-card" data-product="TOP CB White (Top) 500 sheets 61cm x 86cm" data-category="NCR"
                         data-desc="CB (Coated Back) white top sheet for carbonless multi-part forms."
                         data-specs="Size: 61×86cm | Pack: 500 sheets | Type: CB Top Sheet | Colour: White">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/ncrr.avif')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/ncrr.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">NCR Top Sheet</span>
@@ -999,7 +1000,7 @@
                     <div class="prod-card" data-product="MIDDLE CFB Blue 61cm x 86cm" data-category="NCR"
                         data-desc="CFB (Coated Front and Back) middle sheet in blue for carbonless copy sets."
                         data-specs="Size: 61×86cm | Type: CFB Middle | Colour: Blue">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/ncrpad.jpg')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/ncrpad.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">NCR Middle Sheet</span>
@@ -1014,7 +1015,7 @@
                     <div class="prod-card" data-product="Woodfree Bond Paper 80GSM 61x86cm" data-category="Bond Paper"
                         data-desc="High-quality woodfree bond paper for office printing, stationery and writing applications."
                         data-specs="Weight: 80gsm | Size: 61×86cm | Type: Woodfree Bond">
-                        <div class="prod-card-icon" style="background-image: url('../assets/images/woodfree.webp')">
+                        <div class="prod-card-icon" data-bg="url('../assets/images/woodfree.webp')">
                         </div>
                         <div class="prod-card-body">
                             <span class="prod-cat-badge">Bond Paper</span>
@@ -1226,7 +1227,7 @@
     <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
         <div class="mobile-sidebar-header">
-            <img src="../assets/images/uneeco_logo.png" alt="Uneeco Logo" class="mobile-sidebar-logo">
+            <img src="../assets/images/uneeco_logo.webp" alt="Uneeco Logo" class="mobile-sidebar-logo" loading="lazy">
             <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>

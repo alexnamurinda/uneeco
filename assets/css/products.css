@@ -31,28 +31,28 @@
     background-image:
         linear-gradient(135deg, rgba(11, 26, 86, 0.88) 0%, rgba(11, 26, 86, 0.5) 55%, rgba(11, 26, 86, 0.15) 100%),
         linear-gradient(135deg, #0b1a56 0%, #1a2f7a1a 50%, #2d499e06 100%),
-        url('../images/helo.png');
+        url('../images/helo.webp');
 }
 
 .hero-slide--2 {
     background-image:
         linear-gradient(135deg, rgba(11, 26, 86, 0.88) 0%, rgba(11, 26, 86, 0.5) 55%, rgba(11, 26, 86, 0.15) 100%),
         linear-gradient(135deg, #0b1a56 0%, #1a2f7a1a 50%, #2d499e06 100%),
-        url('../images/hero2.png');
+        url('../images/hero2.webp');
 }
 
 .hero-slide--3 {
     background-image:
         linear-gradient(135deg, rgba(11, 26, 86, 0.88) 0%, rgba(11, 26, 86, 0.5) 55%, rgba(11, 26, 86, 0.15) 100%),
         linear-gradient(135deg, #0b1a56 0%, #1a2f7a1a 50%, #2d499e06 100%),
-        url('../images/plates.avif');
+        url('../images/plates.webp');
 }
 
 .hero-slide--4 {
     background-image:
         linear-gradient(135deg, rgba(11, 26, 86, 0.88) 0%, rgba(11, 26, 86, 0.5) 55%, rgba(11, 26, 86, 0.15) 100%),
         linear-gradient(135deg, #0b1a56 0%, #1a2f7a1a 50%, #2d499e06 100%),
-        url('../images/inks.png');
+        url('../images/inks.webp');
 }
 
 .hero-slide-overlay {

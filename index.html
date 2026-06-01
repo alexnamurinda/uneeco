@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uneeco Uganda Limited | Your Premium Paper Supply</title>
     <meta name="description" content="Uneeco Uganda Limited — Uganda's leading supplier of paper, inks, printing plates and offset sundries. Serving businesses, schools and institutions across East Africa since 1984.">
-    <link rel="icon" type="image/png" href="assets/images/uneeco_logo.png">
+    <link rel="icon" type="image/png" href="assets/images/uneeco_logo.webp">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -38,8 +40,8 @@
     <nav class="navbar navbar-expand-lg fixed-top">
 
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="assets/images/uneeco_logo.png" alt="Uneeco Logo"
-                    class="img-fluid"></a>
+            <a class="navbar-brand" href="index.html"><img src="assets/images/uneeco_logo.webp" alt="Uneeco Logo"
+                    class="img-fluid" fetchpriority="high"></a>
             <button class="navbar-toggler collapsed" id="navToggler" type="button" aria-label="Toggle navigation"
                 aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
@@ -93,21 +95,21 @@
                 <div class="col-lg-6 hero-visual" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
                     <div class="hero-stack">
                         <div class="paper-sheet partner-sheet">
-                            <img src="assets/images/TechNova.png" class="partner-img active" alt="TechNova">
-                            <img src="assets/images/Titan.png" class="partner-img" alt="Titan">
-                            <img src="assets/images/OC.png" class="partner-img" alt="OC">
-                            <img src="assets/images/Dupont.png" class="partner-img" alt="Dupont">
+                            <img src="assets/images/TechNova.webp" class="partner-img active" alt="TechNova">
+                            <img src="assets/images/Titan.webp" class="partner-img" alt="Titan">
+                            <img src="assets/images/OC.webp" class="partner-img" alt="OC">
+                            <img src="assets/images/Dupont.webp" class="partner-img" alt="Dupont">
                         </div>
                         <div class="paper-sheet partner-sheet">
-                            <img src="assets/images/OC.png" class="partner-img active" alt="OC">
-                            <img src="assets/images/Dupont.png" class="partner-img" alt="Dupont">
-                            <img src="assets/images/TechNova.png" class="partner-img" alt="TechNova">
-                            <img src="assets/images/Titan.png" class="partner-img" alt="Titan">
+                            <img src="assets/images/OC.webp" class="partner-img active" alt="OC">
+                            <img src="assets/images/Dupont.webp" class="partner-img" alt="Dupont">
+                            <img src="assets/images/TechNova.webp" class="partner-img" alt="TechNova">
+                            <img src="assets/images/Titan.webp" class="partner-img" alt="Titan">
                         </div>
                         <div class="paper-sheet partner-sheet">
                             <div class="partner-slide active">
                                 <div class="paper-logo-mark">
-                                    <img src="assets/images/partner_logo.png" alt="Uneeco Logo">
+                                    <img src="assets/images/partner_logo.webp" alt="Uneeco Logo">
                                 </div>
                                 <div class="partners-label">Our Partners</div>
                                 <div class="paper-line"></div>
@@ -116,10 +118,10 @@
                                 <div class="paper-line"></div>
                                 <div class="paper-line"></div>
                             </div>
-                            <img src="assets/images/Titan.png" class="partner-img" alt="Titan">
-                            <img src="assets/images/Dupont.png" class="partner-img" alt="Dupont">
-                            <img src="assets/images/OC.png" class="partner-img" alt="OC">
-                            <img src="assets/images/TechNova.png" class="partner-img" alt="TechNova">
+                            <img src="assets/images/Titan.webp" class="partner-img" alt="Titan">
+                            <img src="assets/images/Dupont.webp" class="partner-img" alt="Dupont">
+                            <img src="assets/images/OC.webp" class="partner-img" alt="OC">
+                            <img src="assets/images/TechNova.webp" class="partner-img" alt="TechNova">
                         </div>
                     </div>
                 </div>
@@ -277,6 +279,25 @@
         </div>
     </section>
 
+    <!-- CLIENTS -->
+    <section class="clients-section">
+        <div class="container" data-aos="fade-up">
+            <div class="text-center">
+                <h2 class="section-title">Our Clients</h2>
+            </div>
+        </div>
+        <div class="clients-wrapper">
+            <div class="clients-track" id="clientsTrack">
+                <div class="client-logo-item"><img src="assets/images/uppc.webp" alt="UPPC" loading="lazy"></div>
+                <div class="client-logo-item"><img src="assets/images/uneb.webp" alt="UNEB" loading="lazy"></div>
+                 <div class="client-logo-item"><img src="assets/images/sipro.webp" alt="Sipro" loading="lazy"></div>
+                <div class="client-logo-item"><img src="assets/images/picfare.webp" alt="Picfare" loading="lazy"></div>
+                <div class="client-logo-item"><img src="assets/images/digiprint.webp" alt="Digiprint" loading="lazy"></div>
+               
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -354,7 +375,7 @@
     <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
         <div class="mobile-sidebar-header">
-            <img src="assets/images/uneeco_logo.png" alt="Uneeco Logo" class="mobile-sidebar-logo">
+            <img src="assets/images/uneeco_logo.webp" alt="Uneeco Logo" class="mobile-sidebar-logo" loading="lazy">
             <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
